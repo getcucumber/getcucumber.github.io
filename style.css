@@ -13,6 +13,11 @@ body {
   margin: 0;
 }
 
+a {
+  color: unset;
+  text-decoration: none;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -35,11 +40,22 @@ header img {
 
 .header-left,
 .header-right {
-  width: 50px;
+  width: 200px;
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+
+.header-left {
+  justify-content: flex-start;
+}
+
+.header-right {
+  justify-content: flex-end;
+}
+
+.header-right a {
+  text-decoration: underline;
 }
 
 main {
@@ -47,5 +63,29 @@ main {
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.main-left,
+.main-right {
+  flex: 1;
+  height: 100%;
+  display: flex;
+}
+
+.main-left {
+  align-items: center;
+  justify-content: center;
+}
+
+.main-right {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-typeform {
   width: 100%;
 }
